@@ -14,7 +14,6 @@ def resource_path(relative_path):
 
     return os.path.join(base_path, relative_path)
 
-
 # GAME CONTENT
 pygame.init()
 fps = 30
@@ -23,15 +22,6 @@ sur_obj = pygame.display.set_mode((400, 300))
 pygame.display.set_caption("Keyboard_Input")
 White = (255, 255, 255)
 GREY = (128, 128, 128)
-# SPRITE CONTENT
-p1 = 10
-p2 = 10
-step = 8
-SPRITE_SIZE = (32, 32)
-anim = 0
-cur_pos = 'front'
-SPRITES = len(front)
-
 
 f1 = pygame.image.load('walkc/f1.png').convert_alpha()
 f2 = pygame.image.load('walkc/f2.png').convert_alpha()
@@ -56,6 +46,14 @@ back = [b1, b2, b3, b4, b5]
 side = [s1, s2, s3, s4, s5]
 char_state = {'front': front, 'back': back, 'left': side, 'right': side}
 
+# SPRITE CONTENT
+p1 = 10
+p2 = 10
+step = 8
+SPRITE_SIZE = (32, 32)
+anim = 0
+cur_pos = 'front'
+SPRITES = len(front)
 
 while True:
     cur_rect = (p1, p2)
